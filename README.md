@@ -1,36 +1,26 @@
-# Reinforcement Learning Framework
+# Flappy Bird Reinforcement Learning Agent
 
-This project contains implementations of various reinforcement learning algorithms using Python, focused on solving environments via deep Q-learning variants.
+This project implements a Reinforcement Learning (RL) agent to play the game Flappy Bird. The agent is trained using Deep Q-Learning techniques and can be deployed to observe the agent's performance in a simulated environment.
 
-## Table of Contents
 
-1. [Overview](#overview)
-2. [Project Structure](#project-structure)
-3. [Algorithms Implemented](#algorithms-implemented)
-4. [Installation](#installation)
-5. [How to Run](#how-to-run)
-6. [Evaluation Results](#evaluation-results)
-7. [References](#references)
-
----
 
 ## Overview
 
-This repository provides an implementation of reinforcement learning algorithms for training agents to solve specific environments. It includes basic Deep Q-Network (DQN), Double DQN, Dueling DQN, and Maxmin Q-learning methods.
+This repository provides an implementation of reinforcement learning algorithms for training agents to play flappy bird game. It includes basic Deep Q-Network (DQN), Double DQN, Dueling DQN, and Maxmin Q-learning methods.
 
 The project is designed to:
 - Train agents using different DQN approaches.
 - Evaluate the performance of these agents.
 - Compare results visually through graphs and metrics.
 
----
+
 
 ## Project Structure
 
 ### Main Directories
 - **Demo/**: Contains the main scripts for showcasing the agents' performance, including a lightweight application and model inference.
   - `agent.py`: Defines the agent and its interaction with the environment.
-  - `app.py`: A simple application for demonstrating the trained agent.
+  - `app.py`: A simple web application for demonstrating the trained agent.
   - `dqn.py`: Core implementation of the DQN algorithm.
   - `experience_replay.py`: Handles the replay buffer for training.
   - `main.py`: Script to train, test, or visualize agent performance.
@@ -39,7 +29,7 @@ The project is designed to:
 - **TrainBasicDQN/**, **TrainDoubleDQN/**, **TrainDuelingDQN/**, **TrainMaxminQLearning/**: Individual modules for training agents with respective algorithms.
   - Each module includes agent definition, environment setup, and training scripts.
 
----
+
 
 ## Algorithms Implemented
 
@@ -48,7 +38,7 @@ The project is designed to:
 3. **Dueling DQN**: Adds advantage estimation for improved policy evaluation.
 4. **Maxmin Q-Learning**: Combines multiple Q-functions to enhance learning stability.
 
----
+
 
 ## Installation
 
@@ -65,7 +55,7 @@ The project is designed to:
 
 3. Ensure Python 3.9+ is installed.
 
----
+
 
 ## How to Run
 
@@ -75,10 +65,23 @@ Navigate to the respective training directory (e.g., `TrainBasicDQN`) and execut
 python main.py
 ```
 
-### Evaluating an Agent
-Use the `Demo` directory to visualize results:
 
-Take a look at the README file in DEMO directory.
+
+### Evaluating an Agent
+
+Navigate to the respective training directory (e.g., `TrainBasicDQN`) and execute:
+
+```bash
+python demo.py
+```
+
+In the demo file, you can run different models and observe their performance in the environment.
+
+
+
+### Run the web application demo
+
+Use the `Demo` directory to visualize results. Please take a look at the README file in DEMO directory.
 
 
 
@@ -104,3 +107,13 @@ This project uses concepts from the following sources:
 1. Mnih, V., et al. "Playing Atari with Deep Reinforcement Learning." (2013)
 2. Van Hasselt, H., et al. "Deep Reinforcement Learning with Double Q-Learning." (2016)
 3. Wang, Z., et al. "Dueling Network Architectures for Deep Reinforcement Learning." (2016)
+
+
+
+### Helpful Links
+
+You might encounter some issues while setting up the environment. Here are some helpful links:
+
+1. https://stackoverflow.com/questions/77124879/pip-extras-require-must-be-a-dictionary-whose-values-are-strings-or-lists-of
+2. https://github.com/Talendar/flappy-bird-gym/issues/8
+3. https://github.com/Talendar/flappy-bird-gym
